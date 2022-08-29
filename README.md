@@ -12,6 +12,16 @@ Once the cursor of the mouse is hovering each rectangle a speller will pronounce
 [Help](#help)
 
 ## Dependencies
+cv2 
+ctypes
+gtts
+multiprocessing
+numpy
+os
+pandas
+playsound
+time 
+tkinter
 
 
 ## Installation
