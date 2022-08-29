@@ -2,7 +2,7 @@ Mouse Speller
 ====
 
 This project aims to show in a full-screen mode a matrix of letters included in colored rectangles.
-Once the cursor of the mouse is hovering each rectangle the speller will pronounce the letter contained in rectangle.
+Once the cursor of the mouse is hovering each rectangle the speller will pronounce the letter contained in that rectangle.
 It can be used in combination with an eye-tracker, using this latter to control the cursor of the mouse.
 
 ## Contents
@@ -13,20 +13,20 @@ It can be used in combination with an eye-tracker, using this latter to control 
 [Help](#help)
 
 ## Dependencies
-cv2 
-ctypes
-gtts
-multiprocessing
-numpy
-os
-pandas
-playsound
-time 
-tkinter
+* cv2
+* ctypes
+* gtts
+* multiprocessing
+* numpy
+* os
+* pandas
+* playsound
+* time 
+* tkinter
 
 
 ## Installation
-
+Each dependecy can be install with the common comand: pip instal [name_of_depency]
 
 ## Example Usage
 python mouse_speller.py
