@@ -1,2 +1,0 @@
-Speller for Margot is project that aims to show in a full-screen mode a table containing letters within colored rectangles.
-Once the cursor of the mouse hover each rectangle a speller will pronounce the letter contained in rectangle.
