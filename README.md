@@ -5,6 +5,17 @@ This project aims to show in a full-screen mode a matrix of letters included in 
 Once the cursor of the mouse is hovering each rectangle the speller will pronounce the letter contained in that rectangle.
 It can be used in combination with an eye-tracker, using this latter to control the cursor of the mouse.
 
+Because this project wast developed to be used with ET the rectangle are defined as Areas of Interest (AOIs).
+
+Use the files "letters.txt" and "color_backgrounds_and_letters.csv" to set respectively the letters/symbols/words to plot inside the rectangles and its background color and font color.
+
+## Defining Letters/Symbols/Words
+For inserting a letter/symbol/word in "letters.txt" you just need to type it in the line a pressing enter to add the special charcter "\n". Everything is in a single line will be plotted in the rectangle.
+
+## Definig Colors for the Background of the rectangles and for the font.
+For defining the colors to be used as background colors for the rectangles and font colorsi through "color_backgrounds_and_letters.csv" "letters.txt" you just need to type it in the line a pressing enter to add the special charcter "\n". Everything is in a single line will be plotted in the rectangle.
+
+
 ## Contents
 
 [Dependencies](#dependencies)  
