@@ -15,6 +15,10 @@ For inserting a letter/symbol/word in "letters.txt" you just need to type it in 
 ## Definig Colors for the Background of the rectangles and for the font.
 For defining the colors to be used as background colors for the rectangles and font colorsi through "color_backgrounds_and_letters.csv" "letters.txt" you just need to type it in the line a pressing enter to add the special charcter "\n". Everything is in a single line will be plotted in the rectangle.
 
+Each line reports in the order the rgba for backgound color of the rectangle and then the rgb for the font color. Remeber that in the file color must be saved in RGB order and then will be automatic traduced in BGR for cv2 library.
+     
+i.e the first line in "color_backgrounds_and_letters.csv" file reports the values: 243,237,249,255,0,0,0 respectively 'R','G','B','a' for the background color of the rectangle and then the'R','G','B' for the font color.
+
 
 ## Contents
 
