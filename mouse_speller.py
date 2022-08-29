@@ -96,6 +96,14 @@ def load_colors(file_path):
         font_colors.append((int(b_font),int(g_font),int(r_font)))
 
     return bg_colors, font_colors
+
+def load_letters(file_path):
+    with open(file_path) as file:
+        data = file.read()
+        
+        letters = data.split("\n"
+                             )
+    return letters
         
 
 def speak(text):
@@ -209,19 +217,23 @@ if __name__ == '__main__':
     AOIs = {}
     
     # List of letters for the AOIs
-    letters = ["a","i","s","o","l",
-               "r","c","e","n","m",
-               "t","j/ge","d","p","v",
-               u"é","u","f/ph","ch","b"]
+    # letters = ["a","i","s","o","l",
+    #            "r","c","e","n","m",
+    #            "t","j/ge","d","p","v",
+    #            u"é","u","f/ph","ch","b"]
     
     # Specify here a different path and/or filename
     path = r""
-    file_name = "color_backgrounds_and_letters.csv"
-    file_path = op.join(path,file_name)
+    file_name_letters = "letters.txt"
+    file_name_colors = "color_backgrounds_and_letters.csv"
+    file_path_letters = op.join(path,file_name_letters)
+    file_path_colors = op.join(path,file_name_colors)
     
+    # List of letters for the AOIs
+    letters = load_letters(file_path_letters)
     
     # Loading colors for background of the rectabgles and the font of the letter
-    backgorund_colors, font_colors = load_colors(file_path)
+    backgorund_colors, font_colors = load_colors(file_path_colors)
 
     resolution = (screen_width,screen_heigth)
     
