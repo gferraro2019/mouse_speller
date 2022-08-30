@@ -216,12 +216,6 @@ if __name__ == '__main__':
     # Creates a dictionary of AOIs
     AOIs = {}
     
-    # List of letters for the AOIs
-    # letters = ["a","i","s","o","l",
-    #            "r","c","e","n","m",
-    #            "t","j/ge","d","p","v",
-    #            u"é","u","f/ph","ch","b"]
-    
     # Specify here a different path and/or filename
     path = r""
     file_name_letters = "letters.txt"
