@@ -1,0 +1,10 @@
+opencv-python
+ctypes--callable
+gTTS
+multiprocess
+numpy
+os-sys
+pandas
+playsound
+python-time
+tk
