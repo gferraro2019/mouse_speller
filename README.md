@@ -41,7 +41,7 @@ i.e the first line in "color_backgrounds_and_letters.csv" file reports the value
 
 
 ## Installation
-Each dependecy can be install with the common comand: pip instal [name_of_depency]
+All dependecy can be install through the requirements.txt file with the command: pip install -r requirements.txt
 
 ## Example Usage
 python mouse_speller.py
