@@ -7,7 +7,11 @@ mail: giuseppe.ferraro@isae-supaero.fr
 """  
 
 import cv2 
-from ctypes import windll, Structure, c_long, byref
+import sys
+if sys.platform == "linux":
+    import pyautogui
+else:
+    from ctypes import windll, Structure, c_long, byref
 from gtts import gTTS
 from multiprocessing import Process
 import numpy as np
@@ -52,13 +56,26 @@ class AOI():
     def center(self):
         return (int(self.end_point[0]/2),int(self.end_point[1]/2))
 
-class POINT(Structure):
-    """This class defines a point in the screen
 
-    Args:
-        Structure (POINT): a point in the screen identified by its x and y coordinates
-    """
-    _fields_ = [("x", c_long), ("y", c_long)]
+if sys.platform != "linux":
+    class POINT(Structure):
+        """This class defines a point in the screen
+
+        Args:
+            Structure (POINT): a point in the screen identified by its x and y coordinates
+        """
+            
+        _fields_ = [("x", c_long), ("y", c_long)]
+else:
+    class POINT():
+        """This class defines a point in the screen
+
+        Args:
+            Structure (POINT): a point in the screen identified by its x and y coordinates
+        """
+            
+        _fields_ = {"x": None, "y" : None}
+
     
 def random_color():
     """This function generates a random color in RGB
@@ -127,7 +144,10 @@ def queryMousePosition():
         position (dict): a dictionary containing the x and y coordinates.
     """
     pt = POINT()
-    windll.user32.GetCursorPos(byref(pt))
+    if sys.platform != "linux":
+        windll.user32.GetCursorPos(byref(pt))
+    else:
+        pt.x,pt.y = pyautogui.position()
     return { "x": pt.x, "y": pt.y}
 
 def getAOI(position, AOIs):
